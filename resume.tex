@@ -1,3 +1,4 @@
+
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -9,7 +10,15 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
-\usepackage{helvet}
+\usepackage{arev}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
 
 
 \pagestyle{fancy}
@@ -62,8 +71,7 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -71,7 +79,7 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large James Tyner} &  \href{mailto:rusty@rtyner.com}{rusty@rtyner.com}\\
+  \textbf{\Large James Tyner} &  {rusty@rtyner.com}\\
   \href{https://www.linkedin.com/in/jamestyner2}{linkedin.com/in/jamestyner2} &  863.430.2145 \\
   \href{https://github.com/rtyner}{github.com/rtyner}\\
 \end{tabular*}
@@ -109,19 +117,36 @@
         \resumeItem{}
           {Computer and mobile device troubleshooting and repair.}
         \resumeItem{}
-          {Experience with software installation and troubleshooting.}
+          {Software installation, computer configuration, and troubleshooting.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
 \section{Projects}
-  \resumeItemListStart
-        \resumeItem{}
-          {Maintained a homelab to further commit to self improvment}
-	\resumeItem{}
-	  {}
-  \resumeItemListEnd
+  \resumeSubHeadingListStart
 
+    \resumeSubheading
+      {Homelab}{}
+      {VMWare ESXi \& Hyper-V Lab - \href{https://rtyner.com/homelab_topology.pdf}{rtyner.com/homelab.pdf}}{}
+      \resumeItemListStart
+        \resumeItem{}
+          {Secure remote access is provded by OpenVPN.}
+        \resumeItem{}
+          {Spacewalk, Chef, and Ansible are handling the automated deployment and configuration of Linux VMs.}
+        \resumeItem{}
+          {Graylog server is aggregating logs for all Linux VMs, Windows VMs, and network devices}
+        \resumeItem{}
+          {Backups for VMs are done with Veeam}
+        \resumeItem{}
+          {Monitoring is done with Grafana pulling data from SNMP, Telegraf, and custom scripts.}
+        \resumeItem{}
+          {All documentation for the lab is stored in Confluence wiki.}
+        \resumeItem{}
+          {Primary and secondary Windows domain controllers running in failover configuration.}
+        \resumeItem{}
+          {MDT and Group Policy are handling the automated deployment and configuration of Windows VMs.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
@@ -136,15 +161,15 @@
       {Computer Systems \& Information Technology}{August 2013 -- May 2014}
   \resumeSubHeadingListEnd
 
-%-----------TECHNICAL SKILLS-----------------
+%-----------Technical Skills-----------------
 \section{Technical Skills}
   \resumeSubHeadingListStart
     \resumeSubItem{}
-      {Linux administration}
+      {Linux server administration}
+    \resumeSubItem{}
+      {Hyper-V and VMWare ESXi}    
     \resumeSubItem{}
       {Windows Server - Active Directory, Group Policy, WSUS}
-    \resumeSubItem{}
-      {Hyper-V and VMWare ESXi}
     \resumeSubItem{}
       {Office 365 Exchange}
     \resumeSubItem{}
@@ -155,4 +180,3 @@
 %-------------------------------------------
 %}
 \end{document}
-
