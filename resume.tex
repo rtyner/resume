@@ -1,6 +1,4 @@
-
 \documentclass[letterpaper,11pt]{article}
-
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -20,7 +18,6 @@
     urlcolor=blue,
 }
 
-
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -33,9 +30,7 @@
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
-
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
@@ -62,9 +57,7 @@
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
 \renewcommand{\labelitemii}{$\circ$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
@@ -72,9 +65,7 @@
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
-
 %{\fontfamily{}\selectfont
 
 %----------HEADING-----------------
@@ -87,13 +78,14 @@
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
       {Net-Man, Inc.}{Bartow, FL}
       {Systems Administrator}{March 2015 - Present}
       \resumeItemListStart
         \resumeItem{}
           {Installed, configured, and administered network and server infrastructure for over 70 SMB clients.}
+         \resumeItem{}
+          {Setup and managed Graylog syslog server for aggregation of firewall logs. Metrics tracked were failed VPN logins, geo-IP filtering, and content filter alerts.}
         \resumeItem{}
           {Managed backup and recovery of data, utilizing technologies such as Veeam, AWS S3, LTO, and Windows Server Backup.}
         \resumeItem{}
@@ -103,7 +95,6 @@
         \resumeItem{}
           {Created and maintained technical documentation.}
       \resumeItemListEnd
-
     \resumeSubheading
       {Geek Squad}{Lakeland, FL}
       {Consultation Agent, Operations Agent}{July 2014 - April 2015}
@@ -137,17 +128,18 @@
         \resumeItem{}
           {Spacewalk and Ansible are handling the automated deployment and configuration of Linux VMs.}
         \resumeItem{}
-          {Graylog server is aggregating logs for all Linux VMs, Windows VMs, and network devices.}
+          {Graylog server is aggregating logs for all Linux VMs and network devices.}
         \resumeItem{}
           {Backups for VMs are done with Veeam.}
         \resumeItem{}
-          {Monitoring is done with Nagios and Grafana}
+          {Monitoring is done with Nagios and Grafana.}
         \resumeItem{}
           {All documentation for the lab is stored in Confluence wiki.}
         \resumeItem{}
-          {Primary and secondary Windows domain controllers running in failover configuration.}
+          {Primary and seconday Windows domain controllers for MDT, WDS, WSUS, and GPO testing.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
+
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
